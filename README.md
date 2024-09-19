@@ -1,9 +1,8 @@
 # Medical NLP Question Answering 
 *Developed between April and May 2024 at Politecnico di Milano*
 
-The aim of the project was to study the **Medical Meadow Medical Flashcards** dataset and develop multiple **Question Answering LLM** and compare their performances. Lastly a **voice interactive system** version was
-implemented.
-cp
+The aim of the project was to study the **Medical Meadow Medical Flashcards** dataset and develop multiple **Question Answering LLM** and compare their performances. Lastly a **voice interactive system** version was implemented.
+
 ## Dataset: Medical Meadow Medical Flashcards
 
 * Website: https://huggingface.co/datasets/medalpaca/medical_meadow_medical_flashcards
