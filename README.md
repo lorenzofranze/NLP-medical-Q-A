@@ -1,9 +1,9 @@
 # Medical NLP Question Answering 
 *Developed between April and May 2024 at Politecnico di Milano*
 
-The aim of the project was to study the **Medical Meadow Medical Flashcards** dataset and develop multiple **Question Answering LLM** and compair their performances. Lastly a **voice interactive system** version was
+The aim of the project was to study the **Medical Meadow Medical Flashcards** dataset and develop multiple **Question Answering LLM** and compare their performances. Lastly a **voice interactive system** version was
 implemented.
-
+cp
 ## Dataset: Medical Meadow Medical Flashcards
 
 * Website: https://huggingface.co/datasets/medalpaca/medical_meadow_medical_flashcards
@@ -23,7 +23,7 @@ create medical knowledge question answer pairs.
 ))
   - Clustering ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Initial%20Analysis/Clustering.ipynb))  ([colab](https://colab.research.google.com/drive/10RyS5yKwcgAPODXF8TejOxA6mtBq1M4g
 ))
-  - Context Retrival: Using PubMedAPI we extract the *passage* where answer can be found (TF-IDF and BM25 Index Search) ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Initial%20Analysis/Context_Retrival.ipynb))  ([colab](https://colab.research.google.com/drive/15Z4Eyycr0TVuU3E2lxKkJmDpLcCaShw2
+  - Context Retrieval: Using PubMedAPI we extract the *passage* where answer can be found (TF-IDF and BM25 Index Search) ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Initial%20Analysis/Context_Retrival.ipynb))  ([colab](https://colab.research.google.com/drive/15Z4Eyycr0TVuU3E2lxKkJmDpLcCaShw2
 ))
 - Training models
   - Pretrained models fine-tuned on our dataset: well know models fine-tuned on out task and datset
@@ -61,7 +61,7 @@ Our work began with a set of preliminary analyses on the dataset. These analyses
 
 *   Removal of invalid and empty entries to ensure data quality and consistency
 
-*   Comprehensive preprocessing operations, including the removal of punctuation, stopwords, and lemmatization of the questions and of the answers, to stndardize the text and improve model performance. Every preprocessing step separately to allow for later comparisons, such as analyzing senetece length with and without stopwords or lematization
+*   Comprehensive preprocessing operations, including the removal of punctuation, stopwords, and lemmatization of the questions and of the answers, to standardize the text and improve model performance. Every preprocessing step separately to allow for later comparisons, such as analyzing sentence length with and without stopwords or lematization
 
 *  Examination of word counts per question and answer to understand length and complexity, vocabulary analysis for both questions and answers, revealing the diversity and richness of language usage, and distribution analysis of words across the dataset, providing insights into frequency and spread
 
@@ -96,28 +96,28 @@ Another crucial step involves performinng word and sentence embedding on our dat
 
 
 1.   **Learning Word Embedding**:  Our journey begins with learning the embedding representation of our dataset. The questions and answers undergo a preprocessing process, including the removal of punctuation and special characters, expanding contractions, converting words to lowercase, and lemmatization.
-We empoly the Word2Vec model to obtain word representations trained on our dataset. Subsequently, we examine embeddings for a words within our vocabulary and identify similar words. Finally, we visualize the embedding vectors using **t-SNE**
+We employ the Word2Vec model to obtain word representations trained on our dataset. Subsequently, we examine embeddings for a words within our vocabulary and identify similar words. Finally, we visualize the embedding vectors using **t-SNE**
 
 
 
-2.   **Loading Pre-trained models**: To obtain better performances, we leverage pre-trained models for word embeddings. These models, trained on large corpora of data caputre richer semantic meanings and relationships between words. We experimented with different models, such as **Word2Vec**, **Glove** and **fastText**, pre-trained on datasets both specific to our medical domain and more general.
+2.   **Loading Pre-trained models**: To obtain better performances, we leverage pre-trained models for word embeddings. These models, trained on large corpora of data capture richer semantic meanings and relationships between words. We experimented with different models, such as **Word2Vec**, **Glove** and **fastText**, pre-trained on datasets both specific to our medical domain and more general.
 We performed the same operations as in the case of learning word embeddings. Noteworthy is fastText, as it enables us to compute embeddings for out-of-vocabulary words and perform sentence embeddings, a technique we will explore further in subsequent notebooks.
 
 
-The analysis clearly demonstrates that utilizing pre-trained word embedding models leads to enhanced performance. One compelling analysis undercoring this advantage is the word analogy test (within the medical domain). It vividly illutrastes that pre-trained models talilored to specific domains consistently outperform their conterparts
+The analysis clearly demonstrates that utilizing pre-trained word embedding models leads to enhanced performance. One compelling analysis undercoring this advantage is the word analogy test (within the medical domain). It vividly illustrates that pre-trained models taillored to specific domains consistently outperform their counterparts
 
 
-### Context Retrival
+### Context Retrieval
 
 In the development of question-answering systems, having a context for each question is often crucial. Typically, models are trained to understand and retrieve answers within a given context. However, our dataset contains only question and answers without any additional context.
 This challenge presents a valuable opportunity for us to apply our knowledge to build a pseudo-document search engine. This search engine will enable us to retrieve relevant context for a given question, which can then be used for model training or other specific tasks.
 The main steps of our process of context retrievel are:
 
-*  **Keyword Extraction**: extract a set of kywords that capture the essence of the question using a pre-trained model, such as KeyBERT
+*  **Keyword Extraction**: extract a set of Keywords that capture the essence of the question using a pre-trained model, such as KeyBERT
 
-* **Context Retrival**: using the extracted keywords as queries, we utilize the PubMedAPI to search for relevant documents through a vast repository of medical documents, extracting the most relevant ones.
+* **Context Retrieval**: using the extracted keywords as queries, we utilize the PubMedAPI to search for relevant documents through a vast repository of medical documents, extracting the most relevant ones.
 
-* **Preprocessing and Cleaning**:  the retrieved contexts undergo preprocessing and cleaning to ensure they are in the appropriate format for futher analysis.
+* **Preprocessing and Cleaning**:  the retrieved contexts undergo preprocessing and cleaning to ensure they are in the appropriate format for further analysis.
 
 * **Context Ranking**: to prioritize the retrieved contexts, we employ various ranking techniques:
 
@@ -128,8 +128,8 @@ The main steps of our process of context retrievel are:
   * **Sentence Embedding and Cosine Similarity**: compute sentence embeddings for both the question and the retrieved contexts, then evaluate the cosine similarities between them to obtain similarity scores. This process allows us to rank the contexts based on their relevance to the question
 
 
-The last method indeed yielded the best results, as it effectively maintains the semantic relationships between words. This capability enchances the matching process, enabling a more accurate alignment of the question with the context.
-Using these methods, we were able to obtain sufficiently accurate contexts to associate with the questions. However, the effictiveness of this approach is limited by the quaility and reliablity of the external sources we use, as well as the performance of the models employed for document embeddings and the comparison between the documents and the query. Additionally, the computational complexity and time required for retriving and processing the context can also impact the efficiency of the system. Despite these limitations, this approach significantly enhances our ability to provide more relevant and contextually accurate answers
+The last method indeed yielded the best results, as it effectively maintains the semantic relationships between words. This capability enhances the matching process, enabling a more accurate alignment of the question with the context.
+Using these methods, we were able to obtain sufficiently accurate contexts to associate with the questions. However, the effectiveness of this approach is limited by the quality and reliablity of the external sources we use, as well as the performance of the models employed for document embeddings and the comparison between the documents and the query. Additionally, the computational complexity and time required for retriving and processing the context can also impact the efficiency of the system. Despite these limitations, this approach significantly enhances our ability to provide more relevant and contextually accurate answers
 
 
 
@@ -141,7 +141,7 @@ After analysing the data we started research on various open source models that 
 
 The dataset provided was different in terms of structure from the one that we saw in the tutorials. Hence had to search for models which can be fine tuned without the context.
 
-After extensive reasearch we were able to find models like Gemma, Mistral, llama. We leveraged pre-trained versions of Gemma, Mistral, or llama for various QA tasks by fine-tuning them on our Medical datasets. This allowed us for efficient transfer learning, where the model learns from a large, general-purpose dataset and then adapts its knowledge to the specific task at hand.
+After extensive research we were able to find models like Gemma, Mistral, llama. We leveraged pre-trained versions of Gemma, Mistral, or llama for various QA tasks by fine-tuning them on our Medical datasets. This allowed us for efficient transfer learning, where the model learns from a large, general-purpose dataset and then adapts its knowledge to the specific task at hand.
 
 Parallely, we also worked on retrieving the context for our dataset which has been explained in detail in the above section.
 
@@ -172,7 +172,7 @@ We used different techniques like LoRA and QLoRA to fine tune it.We used an open
 
 **2**. **Gemma (7B)**
 
-We trained Gemma (7B) model using unsloth which is an optimzed framework tailored to refine the fine-tuning process for large language models (LLMs). Renowned for its swiftness and memory efficiency, Unsloth can fasten up to 30x training speed and with a notable 60% reduction in memory usage.
+We trained Gemma (7B) model using unsloth which is an optimized framework tailored to refine the fine-tuning process for large language models (LLMs). Renowned for its speed and memory efficiency, Unsloth can fasten up to 30x training speed and with a notable 60% reduction in memory usage.
 
 We used intelligent weight upcasting, a feature that curtails the necessity for upscaling weights during QLoRA, thereby optimizing memory usage.
 
