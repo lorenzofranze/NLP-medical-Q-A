@@ -206,13 +206,13 @@ Assessing the performances was a crucial point of our task, however due to the n
 
 Source of our analysis: https://www.confident-ai.com/blog/llm-evaluation-metrics-everything-you-need-for-llm-evaluation
 
-<img src="https://drive.google.com/uc?export=view&id=1lX5majhjVYnN9ntfObbiywJBMZ-MlZkO" width="600px"> <img src="Initial Analysis\images\65ae30bca9335d1c73650df0_metricsven (1).jpg" width="600px">
+<img src="Initial Analysis\images\65ae30bca9335d1c73650df0_metricsven (1).jpg" width="600px">
 
 As shown in the diagram above completely statistical scores aren't a good metric to compare true and generated answers. For example **BLEU** score doesn't give us precise results and even similar answers but containg different terms are scored as very different: only the precision for each matching n-gram isn't a good metric.
 
 For this reason different Model-based scores have been analyzed and **BertScore** resulted being the best choise since it takes into consideration both semantic and improve n-gram.
 
-<img src="https://drive.google.com/uc?export=view&id=17b3EWuooe3-OrNv_-zBsYmmixa2CGYqV" width="800px"> <img src= "Initial Analysis\images\bert_score.png" width="800px">
+<img src= "Initial Analysis\images\bert_score.png" width="800px">
 
 Key elements of BertScore are:
 
@@ -230,8 +230,7 @@ Lastly even a lot of human evaluation was used both to evaluate the truthfulness
 
 ## 3. Testing **Results**:
 
-
-<img src="https://drive.google.com/uc?export=view&id=1xPSdRvLbE4PzWDjU0zfU4idGftvlnC6K" width="800px"> <img src= "Initial Analysis\images\scores.jpg" width="800px">
+ <img src= "Initial Analysis\images\scores.jpg" width="800px">
 
 As per the above table we can see that the **MedTinyLlama** and **MedGemma** model are the Best models with **90.6** and **91.6** **F1 score** respectively, which was evaluated using the BertScore.
 
