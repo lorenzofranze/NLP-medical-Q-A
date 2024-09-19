@@ -17,25 +17,37 @@ create medical knowledge question answer pairs.
 **note:** *check the notebooks for more datails*
 
 - Preliminary analysis
-  - Data Exploration and Visualization ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Initial%20Analysis/Data%20Exploration.ipynb))  ([colab]())
-  - Word Embedding ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Initial%20Analysis/Word_Embedding.ipynb))  ([colab]())
-  - Clustering ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Initial%20Analysis/Clustering.ipynb))  ([colab]())
-  - Context Retrival: Using PubMedAPI we extract the *passage* where answer can be found (TF-IDF and BM25 Index Search) ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Initial%20Analysis/Context_Retrival.ipynb))  ([colab]())
+  - Data Exploration and Visualization ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Initial%20Analysis/Data%20Exploration.ipynb))  ([colab](https://colab.research.google.com/drive/1ROYltiA5HlbhnGoDlWCTlJ2wA0YiF_iY
+))
+  - Word Embedding ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Initial%20Analysis/Word_Embedding.ipynb))  ([colab](https://colab.research.google.com/drive/1PCu9EIp6dZT7bYpvpKz-6Ej0-MuS9syh
+))
+  - Clustering ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Initial%20Analysis/Clustering.ipynb))  ([colab](https://colab.research.google.com/drive/10RyS5yKwcgAPODXF8TejOxA6mtBq1M4g
+))
+  - Context Retrival: Using PubMedAPI we extract the *passage* where answer can be found (TF-IDF and BM25 Index Search) ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Initial%20Analysis/Context_Retrival.ipynb))  ([colab](https://colab.research.google.com/drive/15Z4Eyycr0TVuU3E2lxKkJmDpLcCaShw2
+))
 - Training models
   - Pretrained models fine-tuned on our dataset: well know models fine-tuned on out task and datset
-    - **TinyLlama**  ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Models/Tiny_Llama.ipynb))  ([colab]())
-    - **Gemma (7B)**  ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Models/Gemma.ipynb))  ([colab]())
-    - **MISTRAL (7B)**  ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Models/Mistral.ipynb))  ([colab]())
-    - **Llama 3 (8B)**  ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Models/Llama.ipynb))  ([colab]())
-    - **GPT-2**  ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Models/GPT2.ipynb))  ([colab]())
+    - **TinyLlama**  ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Models/Tiny_Llama.ipynb))  ([colab](https://colab.research.google.com/drive/1pmX-tXNK81LeXluU6S_ldFxb8jxq8Axi
+))
+    - **Gemma (7B)**  ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Models/Gemma.ipynb))  ([colab](https://colab.research.google.com/drive/19u3z7eVQC_VpD79JVPPZv1omGmDwZXre))
+    - **MISTRAL (7B)**  ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Models/Mistral.ipynb))  ([colab](https://colab.research.google.com/drive/1hzVEJ-Rhlv145Cq0Y2n6RDGpGe9neG6p
+))
+    - **Llama 3 (8B)**  ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Models/Llama.ipynb))  ([colab](https://colab.research.google.com/drive/1D93Mf57Kbpqfx4PTSu7hxXHzQD7rzUZH
+))
+    - **GPT-2**  ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Models/GPT2.ipynb))  ([colab](https://colab.research.google.com/drive/1PDPU0rF0XK_lQehFSfWweXlSEK3pqGFB
+))
  -  Pretrained context-based model: The context retrieved before is used to train a BERT based model in a supervised way using (question, context) -> answer pairs
-   - **BioBert** ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Models/biobert.ipynb))  ([colab]())
-- Testing and performance scores ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Model%20Testing%20and%20Evaluation/Model_Testing.ipynb))  ([colab]())
+    - **BioBert** ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Models/biobert.ipynb))  ([colab](https://colab.research.google.com/drive/1xhYtwUfD_P1Y-pbeDDpg0ZsYu7uvPukE
+))
+- Testing and performance scores ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Model%20Testing%20and%20Evaluation/Model_Testing.ipynb))  ([colab](https://colab.research.google.com/drive/1rVd7xe8dHz787sgW4P1vp_LE6DVnCHS8
+))
   - **BertScore**
   - Evaluation with Embedding: **BioSentVec**
-- Extensions: **Voice Interactive System** ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Voice%20Interactive%20System/MedCortana.ipynb))  ([colab]())
+- Extensions: **Voice Interactive System** ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Voice%20Interactive%20System/MedCortana.ipynb))  ([colab](https://colab.research.google.com/drive/1Sl9MpGXbpbzm7ZBlLzSj5zyCRnxUfsKF
+))
 
-Complete analysis: ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/All%20in%20One%20Presentation/All%20In%20One%20Presentation.ipynb))  ([colab]())
+Complete analysis: ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/All%20in%20One%20Presentation/All%20In%20One%20Presentation.ipynb))  ([colab](https://colab.research.google.com/drive/1ideUIiIgmTofpDEuFS5TPrKJVIgPJ5H-
+))
 
 Here [general report](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Report.ipynb) is shown for convencience along with conclusions but have a look at each notebook individually for more details
 # Report
