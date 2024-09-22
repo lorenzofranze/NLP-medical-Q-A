@@ -23,7 +23,7 @@ create medical knowledge question answer pairs.
   - Clustering ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Initial%20Analysis/Clustering.ipynb))  ([colab](https://colab.research.google.com/drive/10RyS5yKwcgAPODXF8TejOxA6mtBq1M4g
 ))
   - Context Retrieval: Using PubMedAPI we extract the *passage* where answer can be found (TF-IDF and BM25 Index Search) ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Initial%20Analysis/Context_Retrival.ipynb))  ([colab](https://colab.research.google.com/drive/15Z4Eyycr0TVuU3E2lxKkJmDpLcCaShw2
-))
+))  dataset: [questions_context_dataframe.xlsx](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/questions_context_dataframe.xlsx)
 - Training models
   - Pretrained models fine-tuned on our dataset: well know models fine-tuned on out task and datset
     - **TinyLlama**  ([github](https://github.com/lorenzofranze/NLP-medical-Q-A/blob/main/Models/Tiny_Llama.ipynb))  ([colab](https://colab.research.google.com/drive/1pmX-tXNK81LeXluU6S_ldFxb8jxq8Axi
