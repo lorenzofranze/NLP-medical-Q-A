@@ -144,7 +144,7 @@ After extensive research we were able to find models like Gemma, Mistral, llama.
 
 Parallely, we also worked on retrieving the context for our dataset which has been explained in detail in the above section.
 
-###Models
+## 3. Models
 
 For our task we have deployed different solutions, and analyzed different architectures to complete the task. At first glance we can divide them into two groups:
 
@@ -239,7 +239,7 @@ Precision, Recall and F1 returned from BertScore were used for comparison and as
 Lastly even a lot of human evaluation was used both to evaluate the truthfulness and to verify if the sentece was written correctly
 
 
-## 3. Testing **Results**:
+## 4. Testing **Results**:
 
  <img src= "Initial Analysis\images\scores.jpg" width="800px">
 
@@ -266,7 +266,7 @@ The best cosine similarity was from the model **MedMistral** as the result from 
 
 
 
-## 4. Possible extensions:
+## 5. Possible extensions:
 
 ### MedCortana - Voice Interactive System
 
